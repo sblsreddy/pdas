@@ -8,14 +8,17 @@ function getRandomAnimal() {
 }
 
 function App() {
-  const [animals, setAnimals] = useState([]);
+  const [animals, setAnimals] = useState('');
 
   const handleClick = () => {
     setAnimals([...animals, getRandomAnimal()]);
   };
 
+
+
   const renderedAnimals = animals.map((animal, index) => {
-    return <AnimalShow type={animal} key={index} />;
+    //return <p key = {index} > {animal}</p>
+    return <AnimalShow type={animal}  />;
   });
 
   return (
